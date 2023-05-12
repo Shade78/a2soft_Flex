@@ -16,20 +16,30 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6 {font-size: inherit;font-weight: 400;}
 /*----------------------------------------*/
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+  
+.flex-item {
+    font: 900 60px "Roboto", sans-serif;
+    color: #000000;
+    text-align: center;
+}
+  
+.header-item {
+    background-color: white;
+    font: 800 15px "Roboto", sans-serif;    
+}
+.contacts {
+    position: relative;
+    left: 1050px;
 }
 
-main {
-    margin-left: 4vh;
-    margin-right: 6vh; 
-}
-
-.container {
+  
+/* Custom styles */
+.flex-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
+    flex-direction: column;  
+    min-height: 100vh;
+    margin-left: 1%;
+    margin-right: 0.5%;
 }
 
 .menu {
@@ -40,37 +50,26 @@ main {
     margin: 4vh;
     font-weight: 550;
 }
-header {
-    background-color: #ffffff;
-    position: fixed;
-    z-index: 2;
-    min-width: 100%;
-}
-.contacts {
-    position: relative;
-    left: 900px;
+
+main {
+    display: flex;
+    flex: 1;
+    margin-top: 5%;
+    flex-direction: column;
 }
 
-.main-description {
-    margin-top: 24vh;
-    
-}
 .main-description p {
     font-size: 80px;
-    font-weight: 700;
-    margin-bottom: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
-.ticker {
-    display: flex;
-    justify-content: center;
-    min-width: 100vh;
-}
 .ticker p {
     font-size: 100px;
     font-family: sans-serif;
     white-space: nowrap;
     animation: ticker 5.5s infinite linear;
+    font-weight: 400;
 }
 ticker::after{
     content: "Meta   Amazon   Apple   Netflix   Google ";
@@ -87,8 +86,10 @@ ticker::after{
 .info-experience {
     margin-top: 6vh;
     color: gray;
-    font-weight: 700;
-    font-size: 15px
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    
 }
 
 .caption {
@@ -137,6 +138,8 @@ img {
     line-height: 3.5vh; /* поправить шрифт */
 }
 
+
+
 .card-container{
     display: flex;
     justify-content: space-between;
@@ -150,6 +153,7 @@ img {
     padding-left: 4vh;
     padding-top: 1vh;
     overflow: hidden;
+    font-size: 15px;
 }
 .card-container div:hover {
     transform: scale(1.03);
@@ -157,7 +161,6 @@ img {
     transition: transform 0.8s;
     box-shadow: 0 5px 5px -5px rgb(36, 34, 34);
 }
-
 .number {
     position: relative;
     overflow: hidden;
@@ -175,13 +178,6 @@ img {
     margin-top: 5vh;
     gap: 16vh;
 }
-
-.row-container div {
-    margin-bottom: 1.5em;
-    flex-basis: 33%;
-    /* height: 35vh; */
-    /* width: 33.33%; */       
-}
 .our-job {
     font-size: 4.5vh;  
     flex-basis: 36%;
@@ -190,6 +186,7 @@ img {
 
 .process {
     font-weight: 700;
+    width: 350px;
 }
 .process-container {
     display: flex;
@@ -202,14 +199,17 @@ img {
     font-size: 2.2vh;
     flex-basis: 33%;
     position: relative;
+}
+.result_list_ul-1 {
+    font-size: 2.2vh;
+    line-height: 1.6;
+    position: relative;
     right: 20vh;
 }
 .result_list_ul {
     font-size: 2.2vh;
     line-height: 1.6;
     position: relative;
-    right: 20vh;
-
 }
 
 .rowAdvantage {
@@ -240,6 +240,7 @@ img {
 .footer {
     color: white;
     background-color: rgb(28, 27, 27);
+    margin-top: 4em;
 }
 
 .footer_row{
@@ -261,6 +262,9 @@ img {
 
 @media screen and (max-width: 650px){
     main {
-        flex-direction: column; //
+        flex-direction: column; 
       }
 }
+
+
+
